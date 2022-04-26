@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .stage {
+        height: 400px;
+        width: 800px;
+        animation: changeColor 2s infinite;
+        border-radius: 10px;
+      }
+      .ball {
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        animation: bounce 2s linear infinite alternate;
+      }
+
+      @keyframes changeColor {
+        0% {
+          background-color: crimson;
+        }
+        25% {
+          background-color: mediumturquoise;
+        }
+        50% {
+          background-color: tomato;
+        }
+        75% {
+          background-color: yellowgreen;
+        }
+        100% {
+          background-color: deeppink;
+        }
+      }
+
+      @keyframes bounce {
+        0% {
+          top: 0;
+          left: 0;
+          transform: scale(1);
+        }
+        25% {
+          top: 375px;
+          transform: scale(0.5);
+        }
+        50% {
+          top: 0;
+          transform: scale(1);
+        }
+        75% {
+          top: 375px;
+          transform: scale(0.5);
+        }
+        100% {
+          top: 0;
+          left: 750px;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
